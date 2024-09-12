@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="image/product/logo-title-2.jpg" />
+    <title>Stor</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="text-center my-3 text-secondary">Stor Mangment System</h1>
+
+    <div class="w-75 mx-auto text-capitalize">
+        <label for="ProductName"></label>
+        <input type="text" id="ProductName" placeholder="Product Name" class="form-control mt-2 mb-1">
+
+        <label for="ProductPrice"></label>
+        <input type="text" id="ProductPrice" placeholder="Product Price" class="form-control mt-2 mb-2">
+
+        <label for="ProductCategory"></label>
+        <input type="text" list="Category" id="ProductCategory" placeholder="Product Category" class="form-control mt-2 mb-2">
+
+        <datalist id="Category">
+            <option value="Mobile"></option>
+            <option value="Laptop"></option>
+            <option value="TV"></option>
+            <option value="Computer"></option>
+            <option value="Tap"></option>
+        </datalist>
+
+        <label for="ProductDesc"></label>
+        <textarea type="text" id="ProductDesc" placeholder="Descrption" class="form-control mt-2 mb-2"></textarea>
+
+        <label for="ProductImage"></label>
+        <input type="file" id="ProductImage" placeholder="Product Image" class="form-control mt-2 mb-2">
+
+        <div id="addBtn" class="btn btn-outline-info mt-3" onclick="addProduct()">Add Product</div>
+        <div id="updateBtn" class="btn btn-outline-success mt-3 d-none" onclick="updateProduct()">Update Product</div>
+
+    </div>
+    <div class="container">
+        <input type="search" oninput="searchProduct()" id="searchTerm" class="form-control w-75 mx-auto mt-4" placeholder="Search By Name..."> 
+
+        <div id="rowData" class="row py-5">
+            
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
